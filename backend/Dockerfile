@@ -10,7 +10,7 @@ RUN set -e; \
 		libc-dev \
 		linux-headers \
 	;
-RUN install --no-cache-dir -r requirements.txt; \
-	apk del .build-deps;
+RUN pip install -r requirements.txt;
+RUN apk del .build-deps;
 
 CMD ["uwsgi", "app.ini"]
