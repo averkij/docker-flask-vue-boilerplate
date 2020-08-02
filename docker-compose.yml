@@ -12,9 +12,11 @@ services:
         expose:
             - 8080
 
-    nginx:
-        build: ./nginx
-        container_name:  nginx
+    frontend:
+        build: ./frontend
+        container_name:  frontend
         restart: always
+        environment: 
+            - APP_NAME=VueApp
         ports:
             - "80:80"
