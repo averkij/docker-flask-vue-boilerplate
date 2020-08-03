@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+    backend_local:
+        build: ./backend
+        container_name:  backend_local
+        restart: always
+        environment: 
+            - APP_NAME=FlaskApp
+        volumes:
+            - './backend:/backend'
+        expose:
+            - 8080
+
+    frontend_local:
+        build: ./frontend
+        container_name:  frontend_local
+        restart: always
+        environment: 
+            - APP_NAME=VueApp
+        ports:
+            - "80:80"
