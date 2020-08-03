@@ -3,8 +3,10 @@ WORKDIR /app
 COPY /hello ./
 RUN npm install
 RUN npm run build
+COPY /Procfile .
 
 FROM nginx as production-stage
 RUN mkdir /app
 COPY --from=build-stage /app/dist /app
 COPY nginx.conf /etc/nginx/nginx.conf
+CMD /bin/bash -c "envsubst '\$PORT' < /etc/nginx/nginx.conf > /etc/nginx/nginx.conf" && nginx -g 'daemon off;'
