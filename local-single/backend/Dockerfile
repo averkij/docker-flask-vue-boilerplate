@@ -1,7 +1,6 @@
 From python:3.8-alpine
 
 WORKDIR /backend
-
 ADD . /backend
 
 RUN set -e; \

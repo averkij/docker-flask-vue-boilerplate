@@ -1,16 +1,16 @@
 version: "3.7"
 
 services:
-    backend_single:
-        build: ./backend
-        container_name:  backend_single
-        restart: always
-        environment: 
-            - APP_NAME=FlaskApp
-        volumes:
-            - './backend:/backend'
-        expose:
-            - 8080
+    # backend_single:
+    #     build: ./backend
+    #     container_name:  backend_single
+    #     restart: always
+    #     environment: 
+    #         - APP_NAME=FlaskApp
+    #     volumes:
+    #         - './backend:/backend'
+    #     expose:
+    #         - 8080
 
     frontend_single:
         build: ./frontend
