@@ -5,7 +5,7 @@ Deploy to heroku
 
 ```
 heroku login
-heroku container login
+heroku container:login
 ```
 
 ## Build & push

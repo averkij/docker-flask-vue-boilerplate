@@ -1,1 +1,1 @@
-frontend: bin/nginx
+web bin/start-nginx
