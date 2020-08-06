@@ -11,24 +11,26 @@ heroku container:login
 ## Build & push
 
 ```
-heroku container:push --recursive -a <app-name>
+heroku container:push web -a <app-name>
+heroku container:push web -a <app-name-be>
 ```
 
 ## Release
 
 ```
-heroku container:release backend frontend -a <app-name>
+heroku container:release web -a <app-name>
+heroku container:release web -a <app-name-be>
 ```
 
 ## Add dynos (containers)
 
 ```
-heroku ps:scale backend=1 -a <app-name>
-heroku ps:scale frontend=1 -a <app-name>
+heroku ps:scale web=1 -a <app-name>
+heroku ps:scale web=1 -a <app-name-be>
 ```
 
 ## Logs
 
 ```
-heroku logs --tail
+heroku logs --tail -a <app-name>
 ```

@@ -13,4 +13,4 @@ RUN set -e; \
 RUN pip install -r requirements.txt;
 RUN apk del .build-deps;
 
-CMD ["uwsgi", "app.ini"]
+CMD ["uwsgi", "uwsgi.ini"]

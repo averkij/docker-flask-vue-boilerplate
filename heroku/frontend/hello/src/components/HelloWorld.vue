@@ -43,7 +43,7 @@
     },
     methods: {
       test_axios: function () {
-        const baseURI = '/api/hello'
+        const baseURI = 'https://align-me-be.herokuapp.com/api/hello'
         axios.get(baseURI)
           .then((result) => {
             this.msg = result.data
