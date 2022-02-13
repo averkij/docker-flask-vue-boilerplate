@@ -6,7 +6,7 @@ RUN npm install
 RUN npm run build
 
 #setup flask app
-FROM tiangolo/uwsgi-nginx-flask:python3.8 as production-stage
+FROM tiangolo/uwsgi-nginx-flask:python3.10 as production-stage
 
 #serve static/index.html
 ENV STATIC_INDEX 1
